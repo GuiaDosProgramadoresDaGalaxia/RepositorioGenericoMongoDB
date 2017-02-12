@@ -20,7 +20,7 @@ public class Cliente
 Em seguida coloque a connection string no seu arquivo App.Congif
 ```xml
 <connectionStrings>
-    <add name="MongoContexto" connectionString="mongodb://localhost/" />
+    <add name="MongoContexto" connectionString="mongodb://localhost/databaseName" />
 </connectionStrings>
 ```
 Agora crie uma classe de contexto para seu programa e passe o nome da conexão, basta herdar da classe Contexto que está na biblioteca
