@@ -1,5 +1,5 @@
 # RepositorioGenericoMongoDB
-Repositorio génerico criado no molde do repositorio para Entity Framework, mantendo a principal estrutura e um sistema de indentificação de coleção, contem um simples UnityOfWork para manter apenas um objeto de acesso ao banco de dados.
+Repositorio génerico criado no molde do repositorio para Entity Framework, mantendo a principal estrutura e um sistema de indentificação de coleções, contem um simples UnityOfWork para manter apenas um objeto de acesso ao banco de dados.
 
 #Como usar a biblioteca
 - Instale pelo nuget (Install-Package BibliotecaSubeta.Mongo) em todas as suas camadas.
