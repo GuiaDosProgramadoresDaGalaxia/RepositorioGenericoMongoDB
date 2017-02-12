@@ -39,14 +39,28 @@
       <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\packages\MongoDB.Bson.2.4.2\lib\net45\MongoDB.Bson.dll</HintPath>
+    <Reference Include="BibliotecaSubeta.Mongo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BibliotecaSubeta.Mongo.1.0.1\lib\BibliotecaSubeta.Mongo.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\packages\MongoDB.Driver.2.4.2\lib\net45\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Bson, Version=2.4.2.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BibliotecaSubeta.Mongo.1.0.1\lib\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.2.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BibliotecaSubeta.Mongo.1.0.1\lib\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.2.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BibliotecaSubeta.Mongo.1.0.1\lib\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\BibliotecaSubeta.Mongo.1.0.1\lib\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />

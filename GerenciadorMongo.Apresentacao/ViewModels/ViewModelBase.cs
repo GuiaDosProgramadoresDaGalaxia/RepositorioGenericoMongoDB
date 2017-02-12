@@ -1,4 +1,4 @@
-﻿using GerenciadorMongo.Dominio.Interfaces;
+﻿using BibliotecaSubeta.Mongo.Repositorio;
 using GerenciadorMongo.Servicos;
 using System.ComponentModel;
 
