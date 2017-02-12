@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using GerenciadorMongo.Dominio.Uteis;
+using System.Collections.Generic;
 
 namespace GerenciadorMongo.Dominio.Entidades
 {
+    [Colecao("Clientes")]
     public class Cliente : Entidade
     {
         public string Nome { get; set; }
@@ -13,11 +15,6 @@ namespace GerenciadorMongo.Dominio.Entidades
         public Cliente()
         {
             Pedidos = new List<Pedido>();
-        }
-
-        public override string ToString()
-        {
-            return "Clientes";
         }
     }
 }

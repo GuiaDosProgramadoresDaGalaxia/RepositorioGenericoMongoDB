@@ -1,6 +1,8 @@
 ﻿using GerenciadorMongo.Dominio.Entidades;
 using GerenciadorMongo.Dominio.Interfaces;
+using GerenciadorMongo.Dominio.Uteis;
 using MongoDB.Driver;
+using System;
 using System.Configuration;
 
 namespace GerenciadorMongo.Data.Contexto
@@ -27,9 +29,11 @@ namespace GerenciadorMongo.Data.Contexto
 
         public IMongoCollection<TEntidade> Set<TEntidade>() where TEntidade : class, IEntidade, new()
         {
-            var entidade = new TEntidade();
+            var entidadeTipo = typeof(TEntidade);
+            var atributo = Attribute.GetCustomAttribute(entidadeTipo, typeof(ColecaoAttribute));
+            var colecao = atributo as ColecaoAttribute;
 
-            return database.GetCollection<TEntidade>(entidade.ToString());
+            return database.GetCollection<TEntidade>(colecao.Nome);
         }
     }
 }
