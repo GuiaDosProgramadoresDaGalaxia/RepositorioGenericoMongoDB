@@ -2,7 +2,7 @@
 Repositorio génerico criado no molde do repositorio para Entity Framework, mantendo a principal estrutura e um sistema de indentificação de coleções, contem um simples UnityOfWork para manter apenas um objeto de acesso ao banco de dados.
 
 #Como usar a biblioteca
-- Instale pelo nuget (Install-Package BibliotecaSubeta.Mongo) em todas as suas camadas.
+- Instale pelo nuget (https://www.nuget.org/packages/BibliotecaSubeta.Mongo/) em todas as suas camadas.
 
 **Em suas entidades**
 
