@@ -47,6 +47,12 @@ repositorio.Criar(cliente); //Já foi salvo no banco.
 - Metodos de query
   * ObterXXX(filtro, ordernacao, skip, take) //Expressões lambdas
 
+A biblioteca possui suporte para ações assincronas, basta acrescentar 'Async' nos metodos:
+```csharp
+await repositorio.CriarAsync(cliente);
+await repositorio.ObterTodosAsync(c => c.Idade > 18);
+```
+
 # Estrutura
 O projeto está organizado segundo o DDD e a camada de teste (apresentação) de acordo com o MVVM.
 
