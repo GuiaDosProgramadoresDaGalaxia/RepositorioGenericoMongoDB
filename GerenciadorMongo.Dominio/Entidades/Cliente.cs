@@ -1,4 +1,4 @@
-﻿using GerenciadorMongo.Dominio.Uteis;
+﻿using BibliotecaSubeta.Mongo.Entidades;
 using System.Collections.Generic;
 
 namespace GerenciadorMongo.Dominio.Entidades

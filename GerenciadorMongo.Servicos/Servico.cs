@@ -1,6 +1,5 @@
-﻿using GerenciadorMongo.Data.Contexto;
-using GerenciadorMongo.Data.Repositorio;
-using GerenciadorMongo.Dominio.Interfaces;
+﻿using BibliotecaSubeta.Mongo.Repositorio;
+using GerenciadorMongo.Data;
 
 namespace GerenciadorMongo.Servicos
 {
