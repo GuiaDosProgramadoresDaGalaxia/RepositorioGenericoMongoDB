@@ -1,6 +1,52 @@
 # RepositorioGenericoMongoDB
 Repositorio génerico criado no molde do repositorio para Entity Framework, mantendo a principal estrutura e um sistema de indentificação de coleção, contem um simples UnityOfWork para manter apenas um objeto de acesso ao banco de dados.
 
+#Como usar a biblioteca
+- Instale pelo nuget (Install-Package BibliotecaSubeta.Mongo) em todas as suas camadas.
+
+**Em suas entidades**
+
+Você deve herdar da classe 'Entidade' e usar o atributo 'Colecao' para especificar o nome da coleção onde os dados serão salvos no DB.
+```csharp
+[Colecao("Clientes")]
+public class Cliente
+{
+  public string Nome { get; set; }
+  .
+  .
+  .
+}
+```
+Em seguida coloque a connection string no seu arquivo App.Congif
+```xml
+<connectionStrings>
+    <add name="MongoContexto" connectionString="mongodb://localhost/" />
+</connectionStrings>
+```
+Agora crie uma classe de contexto para seu programa e passe o nome da conexão, basta herdar da classe Contexto que está na biblioteca
+```csharp
+public class ProgramaContexto : Contexto
+{
+  public ProgramaContexto() : base("MongoContexto")
+  {
+  }
+}
+```
+Agora é só utilizar a classe Repositorio ou a interface IRepositorio (para injeção de dependencia)
+```csharp
+var repositorio = new Repositorio<ProgramaContexto>(new ProgramaContexto());
+var cliente = new Cliete { Nome = "Subeta" };
+repositorio.Criar(cliente); //Já foi salvo no banco.
+```
+# Documentação
+- Metodos de escrita
+  * Criar(entidade)
+  * Atualizar(entidade)
+  * Remover(id)
+
+- Metodos de query
+  * ObterXXX(filtro, ordernacao, skip, take) //Expressões lambdas
+
 # Estrutura
 O projeto está organizado segundo o DDD e a camada de teste (apresentação) de acordo com o MVVM.
 
